@@ -1,0 +1,9 @@
+/*
+Crea un contatore automatico con setInterval
+Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
+*/
+
+function creaContatoreAutomatico(time) {
+  let counter = 0;
+  return setInterval(() => console.log(counter++), time)
+}
