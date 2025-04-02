@@ -6,4 +6,4 @@ Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e u
 function eseguiFerma(message, start, stop) {
   let interval = setInterval(() => console.log(message), start);
   setTimeout(() => clearInterval(interval), stop);
-}
+};

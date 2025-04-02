@@ -6,14 +6,9 @@ Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo 
 */
 
 function sequenzaOperazioni(operations, time) {
-  let i = 0;
-  let interval = setInterval(() => {
-    if (i < operations.lenght) {
-      operations[i]();
-      i++;
-    }
-    else {
-      clearInterval(interval)
-    }
-  }, time)
+  operations.forEach((operation, i) => {
+    setTimeout(() => {
+      operation();
+    }, time * i)
+  })
 }

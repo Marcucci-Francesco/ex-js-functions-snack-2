@@ -8,5 +8,3 @@ function stampaOgniSecondo(message) {
 }
 
 stampaOgniSecondo("Hello World")
-
-setTimeout(() => clearInterval(stampaOgniSecondo), 5000);

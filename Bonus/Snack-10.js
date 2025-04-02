@@ -6,12 +6,15 @@ Restituisce una nuova funzione che, quando chiamata ripetutamente, esegue l'oper
 */
 
 function creaThrottler(fn, time) {
-  let run = true;
-  return function () {
-    if (run) {
-      fn();
-      run = false;
-      setTimeout(() => run = true, time)
+  let lastEsecution = 0
+  return function (...args) {
+    const hour = Date.now();
+
+    if (hour - lastEsecution >= time) {
+      lastEsecution = hour;
+      return fn(...args);
+    } else {
+      console.log('Non posso eseguire la funzione');
     }
   }
 }

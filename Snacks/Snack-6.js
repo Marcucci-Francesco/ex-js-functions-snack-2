@@ -4,6 +4,9 @@ Definisci una funzione creaContatoreAutomatico che accetta un intervallo di temp
 */
 
 function creaContatoreAutomatico(time) {
-  let counter = 0;
-  return setInterval(() => console.log(counter++), time)
+  let count = 0;
+  return setInterval(() => {
+    count++;
+    console.log(`Il contatore è arrivato a ${count}`);
+  }, time)
 }
